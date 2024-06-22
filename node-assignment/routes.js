@@ -37,6 +37,7 @@ const requestHandler = (req, res) => {
     );
   } else if (url === "/create-user" && method === "POST") {
     const body = [];
+    console.log("new user added");
     req.on("data", (chunk) => {
       body.push(chunk);
     });
