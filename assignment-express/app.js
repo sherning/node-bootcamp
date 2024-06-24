@@ -12,6 +12,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/users", (req, res, next) => {
+  res.send("<h1>USERS WELCOME!</h1>");
+});
+
+app.use("/", (req, res, next) => {
+  res.send("<h1>WELCOME!</h1>");
+});
+
 // Start the server on port 3000
 app.listen(3000, () => {
   console.log("Server running at http://localhost:3000/");
